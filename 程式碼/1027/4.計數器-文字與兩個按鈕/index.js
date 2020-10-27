@@ -1,3 +1,4 @@
+//// 先統一得到目前的網頁上的要使用的DOM元素物件
 const targetText = document.getElementById("target");
 const addButton = document.getElementById("add");
 const subButton = document.getElementById("sub");
