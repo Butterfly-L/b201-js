@@ -9,8 +9,9 @@ const apply = document.getElementById("apply");
 function decimal2Hex(d) {
   let hex = d.toString(16);
 
+  // 補齊只有一位的時候的前面的'0'
   if (hex.length < 2) {
-    hex = 0 + hex;
+    hex = "0" + hex;
   }
 
   return hex;
