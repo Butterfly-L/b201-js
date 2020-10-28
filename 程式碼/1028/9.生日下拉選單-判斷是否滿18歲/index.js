@@ -32,7 +32,7 @@ for (let i = 1; i < 32; i++) {
 day.innerHTML = dayOptions
 
 /// change事件可以得到選到的值
-
+// 先設定預設的值
 let y = 0
 let m = 0
 let d = 0
