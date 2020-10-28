@@ -89,7 +89,7 @@ day.addEventListener('change', function () {
   console.log(y, m, d)
 })
 
-// checkAge
+// checkAge 檢查是否滿18歲
 
 checkAge.addEventListener('click', function () {
   const now = new Date()
