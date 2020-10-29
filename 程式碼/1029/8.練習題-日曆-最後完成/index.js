@@ -2,6 +2,10 @@ const yearAndMonth = document.getElementById('yearAndMonth')
 const title = document.getElementById('title')
 const data = document.getElementById('data')
 
+//如果要得到某個年月日的日曆用下面的語法
+//const now = new Date('2020/3/1')
+
+//得到目前的年月的語法
 const now = new Date()
 
 //用樣版字串的寫法
@@ -9,7 +13,7 @@ const now = new Date()
 
 //用分開定義年和日的寫法
 const nowY = now.getFullYear()
-//注意回傳為0~11
+//月份注意回傳為0~11
 const nowM = now.getMonth() + 1
 
 // 呈現在網頁上
@@ -28,23 +32,25 @@ for (let i = 0; i < weekList.length; i++) {
 title.innerHTML = `<tr>${weekTitleDisplay}</tr>`
 
 // 計算本月有幾天
-const days = new Date(2020, 10, 0).getDate()
+const days = new Date(nowY, nowM, 0).getDate()
 
 // 計算本月的第一天是星期幾，回傳0-6，0代表星期日，1-6代表星期一到六
-const weekdayFirst = new Date('2020/10/1').getDay()
+const weekdayFirst = new Date(`${nowY}/${nowM}/1`).getDay()
 
 console.log(days, weekdayFirst)
 
+// 一維陣列中有多少成員要呈現
 const numberOfMember = days + weekdayFirst
 
 // 產生這個準備呈現在網頁上的陣列
 const dataTemp = []
 
 for (let i = 0; i < numberOfMember; i++) {
-  if (i < 4) {
+  // 第1天的前面的成員只需要空白字串
+  if (i < weekdayFirst) {
     dataTemp.push('')
   } else {
-    dataTemp.push(i - 3)
+    dataTemp.push(i - weekdayFirst + 1)
   }
 }
 
