@@ -37,6 +37,7 @@ console.log(days, weekdayFirst)
 
 const numberOfMember = days + weekdayFirst
 
+// 產生這個準備呈現在網頁上的陣列
 const dataTemp = []
 
 for (let i = 0; i < numberOfMember; i++) {
@@ -54,8 +55,9 @@ let dataDisplay = '<tr>'
 for (let i = 0; i < dataTemp.length; i++) {
   dataDisplay += `<td>${dataTemp[i]}</td>`
 
+  // 每7個要加入一個換下一列的標記
   if ((i + 1) % 7 === 0) {
-    dataDisplay += '</tr>' + '<tr>'
+    dataDisplay += '</tr><tr>'
   }
 }
 
