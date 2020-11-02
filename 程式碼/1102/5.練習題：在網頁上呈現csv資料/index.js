@@ -11,6 +11,8 @@ const csvData = `'學生姓名', '國文', '數學', '英文'
 // global(g)代表全域，就是取代整個字串出現的
 // ignore(i)忽略英文大小寫
 const newData = csvData.replace(/'/g, '')
+// 也可以用replaceAll
+//const newData = csvData.replaceAll("'", '')
 
 // 用分行符號`\n`來分隔字串為陣列
 const dataArray = newData.split('\n')
