@@ -2,6 +2,7 @@ const sum = function (a, b) {
   return a + b
 }
 
+// 第一步改寫
 const sum2 = (a, b) => {
   return a + b
 }
@@ -20,5 +21,6 @@ const increment2 = x => x + 5
 
 //-------
 const func1 = (x) => x + 1
+// 上面的寫法相當於下面這行
 // const func1 = (x) => { return x + 1 }
 const func2 = (x) => { x + 1 }
