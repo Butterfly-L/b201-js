@@ -26,6 +26,8 @@ function createCard(suit, point) {
           break
       }
 
+      // poker函式庫產生卡片圖形的參數
+      // 參考：https://tairraos.github.io/Poker.JS/#chinese-version-readme
       return Poker.getCardImage(100, this.suit, displayPoint)
     }
   }
