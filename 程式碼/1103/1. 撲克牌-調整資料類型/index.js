@@ -8,19 +8,24 @@ function createCard(suit, point) {
     suit: suit,
     point: point,
     display: function () {
-      let displayPoint = this.point + ''
+      console.log(suit, point)
+      let displayPoint = point + ''
 
-      if (this.point === '1') displayPoint = 'A'
-      if (this.point === '11') displayPoint = 'J'
-      if (this.point === '12') displayPoint = 'Q'
-      if (this.point === '13') displayPoint = 'K'
+      if (this.point === 1) displayPoint = 'A'
+      if (this.point === 11) displayPoint = 'J'
+      if (this.point === 12) displayPoint = 'Q'
+      if (this.point === 13) displayPoint = 'K'
 
       // poker函式庫產生卡片圖形的參數
       // 參考：https://tairraos.github.io/Poker.JS/#chinese-version-readme
-      return Poker.getCardImage(150, this.suit, displayPoint)
+
+      console.log(suit, displayPoint)
+
+      return Poker.getCardImage(100, this.suit, displayPoint)
     },
   }
 }
 
-const card = createCard('s', 13)
+const card = createCard('s', 11)
+console.log(card.display())
 desk.appendChild(card.display())
