@@ -1,5 +1,5 @@
 const desk = document.getElementById('desk')
-// 全域常數，代表整副要使用的撲克牌
+// 全域變數，代表整副要使用的撲克牌
 let cards = []
 
 // suit:'h', 'd', 's', 'c'
@@ -53,6 +53,7 @@ function initCards() {
     }
   }
 
+  // 指定目前的牌(全域變數)
   cards = shuffle(tempCards)
 }
 
